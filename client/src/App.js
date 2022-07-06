@@ -1,10 +1,16 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./App.css";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-4xl font-bold text-red-500">SHEYNEWS</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
